@@ -25,7 +25,6 @@ solar wind and geomagnetic drivers, trained on AMIE.
 
 ```bash
 conda env create -f environment.yml -n dhem      # or: pip install -r requirements.txt
-cd weights && sha256sum -c SHA256SUMS.txt
 ```
 
 ## Run
