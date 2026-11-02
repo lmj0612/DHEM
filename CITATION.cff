@@ -12,17 +12,3 @@ authors:
 identifiers:
   - type: doi
     value: 10.5281/zenodo.23892248
-preferred-citation:
-  type: article
-  title: "Diffusion-Based Deep Learning Models for High-Latitude Electrodynamics"
-  journal: "Journal of Geophysical Research: Space Physics"
-  year: 2026
-  authors:
-    - family-names: Li
-      given-names: Minjing
-    - family-names: Deng
-      given-names: Yue
-    - family-names: Ridley
-      given-names: Aaron J.
-    - family-names: Jin
-      given-names: Mingwu
