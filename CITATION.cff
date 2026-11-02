@@ -11,7 +11,7 @@ authors:
     affiliation: The University of Texas at Arlington
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.XXXXXXX
+    value: 10.5281/zenodo.23892248
 preferred-citation:
   type: article
   title: "Diffusion-Based Deep Learning Models for High-Latitude Electrodynamics"
