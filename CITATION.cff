@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "DHEM: Diffusion High-latitude Electrodynamic Models (code and trained weights)"
+title: "DHEM: Diffusion High-latitude Electrodynamic Models"
 type: software
 version: 1.0.0
 date-released: 2026-11-02
