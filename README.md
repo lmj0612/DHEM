@@ -10,7 +10,7 @@ solar wind and geomagnetic drivers, trained on AMIE.
 |---|---|
 | `dhem/` | model code (PyTorch), based on [improved-diffusion](https://github.com/openai/improved-diffusion) |
 | `configs/` | model cards of the nine models |
-| `weights/` | DHEM-EP 240k; DHEM-AP particle energy flux cat1-4 470k / 430k / 420k / 510k; DHEM-AP average energy cat1-4 375k / 385k / 405k / 390k; the `.pt` files are in the Zenodo archive |
+| `weights/` | DHEM-EP 240k; DHEM-AP particle energy flux cat1-4 470k / 430k / 420k / 510k; DHEM-AP average energy cat1-4 375k / 385k / 405k / 390k; the `.pt` files are in the Zenodo archive (https://doi.org/10.5281/zenodo.23892248) |
 | `assets/` | AMIE grid, z-score statistics of the conditioning inputs, normalisation ranges, oval mask of the training maps |
 | `scripts/sample.py` | generate maps |
 | `scripts/evaluate.py` | HP / CPCP statistics |
