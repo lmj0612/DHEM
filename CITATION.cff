@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this archive, please cite the paper and the archive."
+title: "DHEM: Diffusion High-latitude Electrodynamic Models (code, trained weights and figure data)"
+type: software
+version: 1.0.0
+date-released: 2026-11-02
+license: MIT
+authors:
+  - family-names: Li
+    given-names: Minjing
+    affiliation: The University of Texas at Arlington
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.XXXXXXX
+preferred-citation:
+  type: article
+  title: "Diffusion-Based Deep Learning Models for High-Latitude Electrodynamics"
+  journal: "Journal of Geophysical Research: Space Physics"
+  year: 2026
+  authors:
+    - family-names: Li
+      given-names: Minjing
+    - family-names: Deng
+      given-names: Yue
+    - family-names: Ridley
+      given-names: Aaron J.
+    - family-names: Jin
+      given-names: Mingwu

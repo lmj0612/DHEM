@@ -1,0 +1,52 @@
+{
+  "model_id": "dhem_ep_pot56mlat_240k",
+  "name": "DHEM-EP",
+  "target": "electric potential (AMIE channel 2)",
+  "weights": "weights/dhem_ep_pot56mlat_240k.pt",
+  "cond_dim": 56,
+  "cond_layout": "sw8[0:8] = [Newell, sin(clock), cos(clock), SYM-H, Pdyn, F10.7, AE, dipole tilt] (OMNI, z-scored with assets/conditions_joint_9_zscore_stats.npz) + SML[8:32]+SMU[32:56] (SuperMAG 24 MLT-sector lower/upper envelopes, z-scored with assets/conditions_joint_9_zscore_stats_SMU_SML.npz)",
+  "decode": {
+    "kind": "linear",
+    "range_file": "assets/amie_range_train80.json",
+    "channel": 2,
+    "unit": "kV"
+  },
+  "training": {
+    "data": "AMIE 1999, 2001-2002, 2004-2006 (1-min maps, 2,557,057 samples; potential channel, linear min-max to [-1,1])",
+    "batch_size": "2 GPU x 128 = 256",
+    "lr": "1e-4",
+    "steps": 240000,
+    "recipe": "56-d model (C_spatial = 2) to 210k -> MLAT channel added (zero-init), 210k -> 240k"
+  },
+  "category_filter": null,
+  "architecture": {
+    "image_size": 32,
+    "in_channels": 1,
+    "num_channels": 128,
+    "num_res_blocks": 2,
+    "attention_resolutions": "16,8",
+    "num_heads": 4,
+    "num_heads_upsample": 4,
+    "learn_sigma": true,
+    "use_scale_shift_norm": true,
+    "dropout": 0.0,
+    "diffusion_steps": 1000,
+    "noise_schedule": "linear",
+    "rescale_timesteps": true,
+    "rescale_learned_sigmas": true,
+    "use_circ_conv_cond": false,
+    "use_cross_attn": 0,
+    "cond_drop": false,
+    "C_spatial": 3,
+    "spatial_channels": [
+      "sinMLT",
+      "cosMLT",
+      "normMLAT"
+    ],
+    "sampler": "ddim",
+    "ddim_eta": 0.0,
+    "clip_denoised": true
+  },
+  "notes": "Trained with num_heads_upsample = 1; the paper results use the output-block self-attention with 4 heads (same weights), as set here. Raw weights, not EMA.",
+  "selection": "checkpoint 240k, no selection. Paper statistics: 2003 test dataset (even 10-day blocks, scripts/split2003.py)."
+}

@@ -1,0 +1,12 @@
+# Minimal runtime dependencies for sampling and evaluation (tested with Python 3.8.20, CUDA 11.8)
+torch==2.4.1
+numpy==1.24.1
+scipy==1.10.1
+blobfile==3.0.0
+# optional: multi-GPU sampling through MPI (not required by scripts/sample.py)
+# mpi4py==4.0.0
+# optional: condition generation from raw OMNI/SuperMAG inputs (scripts/data_prep)
+# pandas==2.0.3
+# cdflib==1.3.2
+# figures (scripts/figures)
+matplotlib==3.7.5
