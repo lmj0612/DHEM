@@ -2,7 +2,7 @@
 """HP / CPCP / HME of generated maps against AMIE maps and/or against the paper run.
 
   python scripts/evaluate.py --samples out/ap.npz [--amie-dir <AMIE npy of these minutes>] \
-      [--paper examples/2003-11-20/paper_outputs/dhem_ap_flux_maps_2003-11-20.npz] --out out/metrics.json
+      [--paper examples/2003-05-29/paper_outputs/dhem_ap_flux_maps_2003-05-29.npz] --out out/metrics.json
 
 Channel 1 -> HP [GW], channel 2 -> CPCP [kV], channel 0 -> HME [keV] (needs the AMIE flux). Reports Pearson r, bias,
 95 % limits of agreement and MAE. A new realization is not expected to match the paper maps minute by minute; the

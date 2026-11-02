@@ -14,12 +14,12 @@ solar wind and geomagnetic drivers, trained on AMIE.
 | `assets/` | AMIE grid, z-score statistics of the conditioning inputs, normalisation ranges, oval mask of the training maps |
 | `scripts/sample.py` | generate maps |
 | `scripts/evaluate.py` | HP / CPCP statistics |
-| `scripts/run_example_day.sh`, `scripts/run_example_event.sh` | examples: 2003-11-20 and 6-7 April 2000 |
+| `scripts/run_example_day.sh`, `scripts/run_example_event.sh` | examples: 2003-05-29 and 6-7 April 2000 |
 | `scripts/training/` | training scripts `image_train_*.py` |
 | `scripts/data_prep/` | AMIE to npy, conditioning vectors from OMNI / SuperMAG / SOPHIE |
 | `scripts/figures/` | python scripts of the figures; data in [DHEM_data_for_figures](https://github.com/lmj0612/DHEM_data_for_figures) |
 | `conditions/` | condition vectors of the 2003 test dataset (one minute every 10 min, 43,777 min) and of Figures 3-5 |
-| `examples/` | conditions and outputs for 2003-11-20 and 6-7 April 2000 |
+| `examples/` | conditions and outputs for 2003-05-29 and 6-7 April 2000 |
 
 ## Install
 
@@ -30,8 +30,8 @@ conda env create -f environment.yml -n dhem      # or: pip install -r requiremen
 ## Run
 
 ```bash
-python scripts/sample.py --family dhem_ap --conditions examples/2003-11-20/conditions/conds_dhem_ap_2003-11-20.npz --out out/ap.npz
-python scripts/evaluate.py --samples out/ap.npz --paper examples/2003-11-20/paper_outputs/dhem_ap_flux_maps_2003-11-20.npz
+python scripts/sample.py --family dhem_ap --conditions examples/2003-05-29/conditions/conds_dhem_ap_2003-05-29.npz --out out/ap.npz
+python scripts/evaluate.py --samples out/ap.npz --paper examples/2003-05-29/paper_outputs/dhem_ap_flux_maps_2003-05-29.npz
 ```
 
 - `--family dhem_ap | dhem_ape | dhem_ep`, or `--config configs/<model>.json` for one model.
